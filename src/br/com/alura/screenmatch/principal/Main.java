@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch.principal;
+
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroDeRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
@@ -9,10 +11,10 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
+        Filme meuFilme = new Filme("Top Gun - Asas indomáveis", 1983);
 
-        meuFilme.setNome("Top Gun - Asas indomáveis");
-        meuFilme.setAnoDeLancamento(1983);
+        //meuFilme.setNome("Top Gun - Asas indomáveis");
+        //meuFilme.setAnoDeLancamento(1983);
         meuFilme.setDuracaoEmMinutos(180);
 
 
@@ -33,10 +35,10 @@ public class Main {
 
         System.out.println("A média de avaliações desse filme é: " +meuFilme.pegaMedia());
 
-        Filme outroFilme = new Filme();
+        Filme outroFilme = new Filme("Rock IV", 2000);
 
-        outroFilme.setNome("Rock IV");
-        outroFilme.setAnoDeLancamento(2000);
+        //outroFilme.setNome("Rock IV");
+       // outroFilme.setAnoDeLancamento(2000);
         outroFilme.setDuracaoEmMinutos(200);
 
         // calcular tempo total de filmes do catalogo.
@@ -52,10 +54,10 @@ public class Main {
         System.out.println("---------------------------------------------------------------------------------------");
 
 
-        Serie lost = new Serie();
+        Serie lost = new Serie("lost", 1995);
 
-        lost.setNome("lost");
-        lost.setAnoDeLancamento(1995);
+       // lost.setNome("lost");
+       // lost.setAnoDeLancamento(1995);
         lost.exibirFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
@@ -81,9 +83,9 @@ public class Main {
 
         System.out.println("-----------------------------------------------------------------------------------");
 
-        var filmesDoPaulo = new Filme();
-        filmesDoPaulo.setDuracaoEmMinutos(200);
-        filmesDoPaulo.setNome("onde os fracos não tem vez.");
+        var filmesDoPaulo = new Filme("onde os fracos não tem vez", 2000);
+        //filmesDoPaulo.setDuracaoEmMinutos(200);
+        //filmesDoPaulo.setNome("onde os fracos não tem vez.");
         filmesDoPaulo.setAnoDeLancamento(2019);
         filmesDoPaulo.avalia(10);
 
@@ -94,13 +96,6 @@ public class Main {
         System.out.println("Tamanho da lista " + listaDeFilmes.size());
         System.out.println("Primeiro filme " + listaDeFilmes.get(0).getNome());
         System.out.println(listaDeFilmes);
-
-
-
-
-
-
-
 
     }
 }

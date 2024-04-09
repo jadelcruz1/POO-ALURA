@@ -10,6 +10,11 @@ public class Titulo {
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
 
+    public Titulo(String nome, int anoDeLancamento) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
     public double getSomaDasAvalicacao() {
         return somaDasAvalicacao;
     }
@@ -60,4 +65,6 @@ public class Titulo {
     public double pegaMedia(){
         return somaDasAvalicacao / totalDeAvaliacoes;
     }
+
+
 }
