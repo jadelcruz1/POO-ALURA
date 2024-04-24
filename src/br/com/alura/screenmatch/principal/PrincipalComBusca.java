@@ -6,6 +6,7 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URLEncoder;
@@ -51,6 +52,12 @@ public class PrincipalComBusca {
 
             Titulo meuTitulo = new Titulo(meuTituloOmdb);
             System.out.println(meuTitulo);
+
+            // criação de arquivo
+            FileWriter escrita = new FileWriter("filmes.txt");
+            escrita.write(meuTitulo.toString());
+            escrita.close();
+
 
         } catch (IllegalArgumentException e) {
             System.out.println(("Algum erro de argumento na execução da busca, verifique o titulo. "));
