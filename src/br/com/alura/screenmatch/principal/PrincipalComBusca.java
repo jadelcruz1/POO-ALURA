@@ -6,6 +6,8 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
@@ -69,5 +71,20 @@ public class PrincipalComBusca {
         finally {
             System.out.println("O programa finalizou corretamente.");
         }
-    }
+
+        try {
+
+        File arquivo = new File("filmes.txt");
+        Scanner scanner = new Scanner(arquivo);
+
+        while (scanner.hasNextLine()) {
+            String linha = scanner.nextLine();
+            System.out.println("Conteudo do arquivo: " + linha);
+        }
+
+        scanner.close();
+    } catch ( FileNotFoundException e) {
+        System.out.println("Arquivo não encontrado!" + e.getMessage());
+    } }
+
 }
